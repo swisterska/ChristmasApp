@@ -33,4 +33,14 @@
 
     </ImageButton>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/glikerblackfont"
+        android:gravity="top|center"
+        android:text="📋View your gift/greeting history"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:translationY="30dp" />
+
 </LinearLayout>

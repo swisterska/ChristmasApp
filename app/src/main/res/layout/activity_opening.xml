@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:background="#00FFFFFF"
         android:src="@drawable/continuebutton"
-        android:translationY="220dp"
+        android:translationY="235dp"
         android:contentDescription="@string/continue_button" >
 
     </ImageButton>

@@ -215,9 +215,16 @@ class WelcomePage : AppCompatActivity() {
             }
 
        val greetingButton = findViewById<ImageButton>(R.id.GreetingButton)
-        giftButton.setOnClickListener {
+        greetingButton.setOnClickListener {
 
-        val intent = Intent(this, GreetingActivity::class.java)
-        startActivity(intent)
+            val intent = Intent(this, GreetingActivity::class.java)
+            startActivity(intent)
+        }
+
+        val viewHistoryButton = findViewById<ImageButton>(R.id.ViewHistoryButton)
+        viewHistoryButton.setOnClickListener {
+
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
         }
 }}

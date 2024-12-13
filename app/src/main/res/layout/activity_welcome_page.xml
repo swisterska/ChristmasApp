@@ -17,7 +17,7 @@
         android:contentDescription="@string/continue_button"
         android:padding="10dp"
         android:src="@drawable/giftbutton"
-        android:translationY="-10dp">
+        android:translationY="-5dp">
 
     </ImageButton>
 
@@ -28,19 +28,23 @@
         android:padding="10dp"
         android:layout_gravity="center"
         android:background="#00FFFFFF"
-        android:src="@drawable/textbutton"
-        android:contentDescription="@string/continue_button" >
+        android:src="@drawable/greetingbutton"
+        android:contentDescription="@string/continue_button"
+        android:translationY="10dp">
 
     </ImageButton>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/glikerblackfont"
-        android:gravity="top|center"
-        android:text="📋View your gift/greeting history"
-        android:textColor="@color/yellow"
-        android:textSize="15sp"
-        android:translationY="30dp" />
+    <ImageButton
+        android:id="@+id/ViewHistoryButton"
+        android:layout_width="279dp"
+        android:layout_height="72dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:src="@drawable/historybutton"
+        android:contentDescription="@string/continue_button"
+        android:translationY="25dp">
+
+    </ImageButton>
 
 </LinearLayout>

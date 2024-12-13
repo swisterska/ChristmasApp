@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ChristmasApp</string>
     <string name="continue_button">ChristmasApp</string>
+    <string name="opening_activity_description">Tap anywhere to continue to the next page</string>
+
+
 </resources>

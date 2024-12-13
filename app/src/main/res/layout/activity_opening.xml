@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/OpeningActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/apppage"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/ContinueButton"
+        android:layout_width="279dp"
+        android:layout_height="72dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:src="@drawable/continuebutton"
+        android:translationY="220dp"
+        android:contentDescription="@string/continue_button" >
+
+    </ImageButton>
+
+</LinearLayout>

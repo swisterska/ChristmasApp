@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HistoryActivity">
+<LinearLayout
+    android:id="@+id/OpeningActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/GiftHistoryButton"
+        android:layout_width="276dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/gift_history_button"
+        android:padding="10dp"
+        android:src="@drawable/greetinghistory">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/GreetingHistoryButton"
+        android:layout_width="276dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/greeting_history_button"
+        android:padding="10dp"
+        android:src="@drawable/gifthistory">
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/ReturnButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="top"
+        android:background="#00FFFFFF"
+        android:src="@drawable/returnbuttonwhitebackground"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:translationY="-370dp" />
+
+</LinearLayout>

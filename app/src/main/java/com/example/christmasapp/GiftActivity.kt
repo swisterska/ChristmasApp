@@ -135,7 +135,7 @@ class GiftActivity : AppCompatActivity() {
 
         // View history button logic
         viewHistoryButton.setOnClickListener {
-            val intent = Intent(this, HistoryActivity::class.java)
+            val intent = Intent(this, GiftHistoryActivity::class.java)
             startActivity(intent)
         }
     }

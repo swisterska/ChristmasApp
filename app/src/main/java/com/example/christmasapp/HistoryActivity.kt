@@ -1,20 +1,41 @@
 package com.example.christmasapp
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.ImageButton
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class HistoryActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         setContentView(R.layout.activity_history)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val buttonGiftHistory = findViewById<ImageButton>(R.id.GiftHistoryButton)
+        buttonGiftHistory.setOnClickListener {
+
+            val intent = Intent(this, GiftHistoryActivity::class.java)
+            startActivity(intent)
         }
+
+        val buttonGreetingHistory = findViewById<ImageButton>(R.id.GreetingHistoryButton)
+        buttonGreetingHistory.setOnClickListener {
+
+            val intent = Intent(this, GreetingHistoryActivity::class.java)
+            startActivity(intent)
+        }
+
+        val returnButton = findViewById<ImageButton>(R.id.ReturnButton)
+        returnButton.setOnClickListener{
+
+            val intent = Intent(this, WelcomePage::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

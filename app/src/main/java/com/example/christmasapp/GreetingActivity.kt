@@ -152,7 +152,7 @@ class GreetingActivity : AppCompatActivity() {
 
         // View history button logic
         viewHistoryButton.setOnClickListener {
-            val intent = Intent(this, HistoryActivity::class.java)
+            val intent = Intent(this, GreetingHistoryActivity::class.java)
             startActivity(intent)
         }
     }

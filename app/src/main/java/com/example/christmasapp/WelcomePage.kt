@@ -207,14 +207,14 @@ class WelcomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome_page)
 
-       val giftButton = findViewById<ImageButton>(R.id.GiftButton)
-            giftButton.setOnClickListener {
+        val giftButton = findViewById<ImageButton>(R.id.GiftButton)
+        giftButton.setOnClickListener {
 
             val intent = Intent(this, GiftActivity::class.java)
             startActivity(intent)
-            }
+        }
 
-       val greetingButton = findViewById<ImageButton>(R.id.GreetingButton)
+        val greetingButton = findViewById<ImageButton>(R.id.GreetingButton)
         greetingButton.setOnClickListener {
 
             val intent = Intent(this, GreetingActivity::class.java)
@@ -222,9 +222,8 @@ class WelcomePage : AppCompatActivity() {
         }
 
         val viewHistoryButton = findViewById<ImageButton>(R.id.ViewHistoryButton)
-        viewHistoryButton.setOnClickListener {
-
+        viewHistoryButton.setOnClickListener{
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
-}}
+    }}

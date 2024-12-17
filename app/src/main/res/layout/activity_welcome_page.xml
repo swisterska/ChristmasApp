@@ -8,6 +8,36 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:translationY="-230dp">
+
+        <ImageButton
+            android:id="@+id/ReturnButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00FFFFFF"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <ImageButton
+            android:id="@+id/MusicOnButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/musiconbutton"
+            android:contentDescription="Music on button" />
+
+    </LinearLayout>
+
     <ImageButton
         android:id="@+id/GiftButton"
         android:layout_width="279dp"
@@ -17,7 +47,7 @@
         android:contentDescription="@string/continue_button"
         android:padding="10dp"
         android:src="@drawable/giftbutton"
-        android:translationY="-5dp">
+        android:translationY="-65dp">
 
     </ImageButton>
 
@@ -30,7 +60,7 @@
         android:background="#00FFFFFF"
         android:src="@drawable/greetingbutton"
         android:contentDescription="@string/continue_button"
-        android:translationY="10dp">
+        android:translationY="-50dp">
 
     </ImageButton>
 
@@ -43,7 +73,7 @@
         android:background="#00FFFFFF"
         android:src="@drawable/historybutton"
         android:contentDescription="@string/continue_button"
-        android:translationY="25dp">
+        android:translationY="-35dp">
 
     </ImageButton>
 

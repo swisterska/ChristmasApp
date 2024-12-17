@@ -8,9 +8,11 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
+import android.media.MediaPlayer
 
 
-class GreetingActivity : AppCompatActivity() {
+class GreetingActivity : BaseActivity() {
+
 
     private val greetingsIdeas = arrayOf(
         "Merry Christmas \nand joy!",
@@ -109,7 +111,9 @@ class GreetingActivity : AppCompatActivity() {
 
     )
 
-    private val history = mutableListOf<String>()
+    object HistoryManager {
+        val history = mutableListOf<String>()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -132,7 +136,6 @@ class GreetingActivity : AppCompatActivity() {
                     currentIndex++
                     handler.postDelayed(this, 1000) // 1 second delay
                 } else {
-                    // Display random greeting after countdown with Grinch logic
                     countdownText.text = "" // Clear the countdown
                     handleGrinchInterference("greeting", greetingText)
                 }
@@ -144,13 +147,11 @@ class GreetingActivity : AppCompatActivity() {
             handleGrinchInterference("greeting", greetingText)
         }
 
-        // Return button logic
         returnButton.setOnClickListener {
             val intent = Intent(this, WelcomePage::class.java)
             startActivity(intent)
         }
 
-        // View history button logic
         viewHistoryButton.setOnClickListener {
             val intent = Intent(this, GreetingHistoryActivity::class.java)
             startActivity(intent)
@@ -158,22 +159,18 @@ class GreetingActivity : AppCompatActivity() {
     }
 
     private fun handleGrinchInterference(type: String, displayText: TextView) {
-        if (Random.nextInt(100) < 20) { // 20% chance Grinch interferes
-            val grinchMessage = when (type) {
-                "greeting" -> "Wishes canceled, the Grinch \nwas here first!\n \nGo back to main page."
-                else -> "The Grinch strikes again!"
-            }
-            history.add(grinchMessage)
-            // Launch GrinchActivity with the message
+        if (Random.nextInt(100) < 20) {
+            val grinchMessage = "Wishes canceled, the Grinch was here first! Go back to the main page."
+            HistoryManager.history.add("Grinch appeared: $grinchMessage")
             val intent = Intent(this, GrinchActivity::class.java)
             intent.putExtra("grinchMessage", grinchMessage)
             startActivity(intent)
         } else {
-            val message = when (type) {
-                "greeting" -> greetingsIdeas.random()
-                else -> "Unexpected choice"
-            }
-            history.add(message)
+            val message = greetingsIdeas.random()
             displayText.text = message
+            if (type == "greeting") {
+                HistoryManager.history.add("Greeting: $message")
+            }
         }
-    }}
+    }
+}

@@ -8,25 +8,50 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <!-- Horizontal Layout for Buttons, moved higher -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:translationY="-290dp"> <!-- Added marginTop for vertical spacing -->
+
+        <ImageButton
+            android:id="@+id/ReturnButtonWhite"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/returnbuttonwhitebackground" />
+
+        <!-- Larger Space Between Buttons -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <ImageButton
+            android:id="@+id/MusicOnButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/musiconbutton"
+            android:contentDescription="Music on button" />
+
+    </LinearLayout>
+
+    <!-- Grinch Message Text (now below the buttons with spacing) -->
     <TextView
         android:id="@+id/grinchMessageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-230dp"
         android:gravity="center"
         android:text="Loading message..."
         android:textColor="#7E0303"
         android:textSize="30sp"
-        android:fontFamily="@font/glikerblackfont"/>
-    <ImageButton
-        android:id="@+id/ReturnButtonWhite"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/returnbuttonwhitebackground"
-        android:layout_gravity="top|start"
-        android:layout_marginStart="16dp"
-        android:translationY="-270dp" />
+        android:fontFamily="@font/glikerblackfont"
+        android:layout_marginTop="20dp"
+        android:translationY="-300dp"/> <!-- Added marginTop to separate text from buttons -->
 
 </LinearLayout>

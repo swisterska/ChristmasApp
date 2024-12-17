@@ -8,6 +8,26 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        android:translationY="-300dp"
+        android:translationX="300dp">
+
+
+        <ImageButton
+            android:id="@+id/MusicOnButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/musiconbutton"
+            android:contentDescription="Music on button" />
+
+    </LinearLayout>
+
     <ImageButton
         android:id="@+id/ContinueButton"
         android:layout_width="276dp"
@@ -17,7 +37,7 @@
         android:contentDescription="@string/continue_button"
         android:padding="10dp"
         android:src="@drawable/continuebutton"
-        android:translationY="240dp">
+        android:translationY="180dp">
 
     </ImageButton>
 

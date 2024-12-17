@@ -1,14 +1,25 @@
 package com.example.christmasapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.ImageButton
 
-class GreetingHistoryActivity : AppCompatActivity() {
+
+class GreetingHistoryActivity : BaseActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_greeting_history)
+
+        val returnButton = findViewById<ImageButton>(R.id.ReturnButton)
+        returnButton.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
 
     }
+
+
 }

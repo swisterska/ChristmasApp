@@ -15,105 +15,103 @@ class GreetingActivity : BaseActivity() {
 
 
     private val greetingsIdeas = arrayOf(
-        "Merry Christmas \nand joy!",
-        "Peace, love, \nand twinkle lights.",
-        "Season's blessings \nto you.",
-        "Warm cocoa, \nwarmer hearts!",
-        "Snowy wishes, \nmerry kisses.",
-        "Let it snow \nhappiness!",
-        "Magic and joy \nawait!",
-        "Hope shines \nthis season.",
-        "Cozy up, \nit’s Christmas!",
-        "Cheers to \nholiday love.",
-        "Twinkling stars, \nglowing hearts.",
-        "Festive cheers, \nmerry years!",
-        "Santa’s sleigh \nis near!",
-        "Joyful times, \nfestive rhymes.",
-        "Holly, jolly, \nand bright!",
-        "Under the mistletoe \nglow.",
-        "Candles flicker, \nhearts warm.",
-        "A season of \nsparkling joy.",
-        "Reindeer magic \nfills the air.",
-        "Snowflakes and \nmerry dreams.",
-        "Gingerbread hugs \nand love.",
-        "Santa's on \nhis way!",
-        "All is calm, \nall is bright.",
-        "Believe in the \nholiday magic.",
-        "Pine-scented wishes \nfor you.",
-        "Christmas cheer \neverywhere!",
-        "Holiday hugs, \nfestive mugs.",
-        "Carols sung \nwith pure joy.",
-        "Shimmering lights, \nwarm nights.",
-        "Bells ringing, \nhearts singing.",
-        "Unwrap joy \nthis season!",
-        "Sparkles, laughter, \nand love.",
-        "Jingle bells and \nhappy spells.",
-        "Joy to the world, \nalways!",
-        "Bright stars, \nbrighter hearts.",
-        "Let Christmas cheer \nfill you!",
-        "Candy canes and \nsnowy lanes.",
-        "Fa-la-la-la-la, \nit’s Christmas!",
-        "Wishing you \ntidings of joy.",
-        "Santa’s list \nhas you on it!",
-        "Reindeer footprints \nin snow.",
-        "The season of \nwarm hearts.",
-        "Happy hearts, \nholiday starts.",
-        "Glow with the \nChristmas spirit.",
-        "Sweet treats, \nsweeter moments.",
-        "Gifts wrapped \nin love.",
-        "Let your heart \nfeel merry.",
-        "Frosty mornings, \ncozy evenings.",
-        "Toasty hearts, \nfestive starts.",
-        "Wishing you \nendless wonder.",
-        "Stars twinkle, \nhearts sprinkle.",
-        "Crisp air, \nwarm wishes.",
-        "Joy sparkles \neverywhere!",
-        "Christmas trees \nand warm teas.",
-        "Snow-dusted \nmagical days.",
-        "Mistletoe, kisses, \nand cheer.",
-        "Hugs, smiles, \nand holiday miles.",
-        "Merry hearts, \nbright starts.",
-        "Jolly vibes \nand glowing tides.",
-        "Elves are hard \nat work!",
-        "Presents, peace, \nand perfection.",
-        "Holiday magic \nis here!",
-        "Laughter and \nlight abound.",
-        "Share love this \nholiday season.",
-        "Ornaments glow \nwith cheer.",
-        "Frosty fun, \nholiday sun.",
-        "Baking cookies, \nspreading joy.",
-        "Seasonal greetings \nfrom the heart.",
-        "Deck the halls \nwith joy!",
-        "Silent nights, \njoyful sights.",
-        "Yule magic \nis everywhere.",
-        "Wrapping joy \nin every bow.",
-        "Evergreen trees \nand happy bees.",
-        "Festive spirit, \nwarmest hugs.",
-        "Wishing you \nfrosty delight.",
-        "Holiday warmth \nfills the air.",
-        "Golden bells and \nsnowy spells.",
-        "Stars and stockings, \nall bright.",
-        "Holiday hugs \nfor everyone.",
-        "Decked out in \nChristmas cheer.",
-        "Rejoice in \nholiday splendor!",
-        "Heartfelt greetings, \nfestive meetings.",
-        "Cheer abounds, \nmagic surrounds.",
-        "Dreams of snow \nand joy.",
-        "Happy wishes, \nfestive dishes.",
-        "Cider, warmth, \nand celebration.",
-        "Bright memories \nfor you.",
-        "Season’s greetings, \nwarm meetings.",
-        "May your holidays \nglow bright.",
-        "Winter magic and \nbright stars.",
-        "Sharing joy and \nheartfelt love.",
-        "Wishing snowflakes \nand joy.",
-        "Christmas cuddles \nand carols."
+        "Merry Christmas and joy!",
+        "Peace, love, and twinkle lights.",
+        "Season's blessings to you.",
+        "Warm cocoa, warmer hearts!",
+        "Snowy wishes, merry kisses.",
+        "Let it snow happiness!",
+        "Magic and joy await!",
+        "Hope shines this season.",
+        "Cozy up, it’s Christmas!",
+        "Cheers to holiday love.",
+        "Twinkling stars, glowing hearts.",
+        "Festive cheers, merry years!",
+        "Santa’s sleigh is near!",
+        "Joyful times, festive rhymes.",
+        "Holly, jolly, and bright!",
+        "Under the mistletoe glow.",
+        "Candles flicker, hearts warm.",
+        "A season of sparkling joy.",
+        "Reindeer magic fills the air.",
+        "Snowflakes and merry dreams.",
+        "Gingerbread hugs and love.",
+        "Santa's on his way!",
+        "All is calm, all is bright.",
+        "Believe in the holiday magic.",
+        "Pine-scented wishes for you.",
+        "Christmas cheer everywhere!",
+        "Holiday hugs, festive mugs.",
+        "Carols sung with pure joy.",
+        "Shimmering lights, warm nights.",
+        "Bells ringing, hearts singing.",
+        "Unwrap joy this season!",
+        "Sparkles, laughter, and love.",
+        "Jingle bells and happy spells.",
+        "Joy to the world, always!",
+        "Bright stars, brighter hearts.",
+        "Let Christmas cheer fill you!",
+        "Candy canes and snowy lanes.",
+        "Fa-la-la-la-la, it’s Christmas!",
+        "Wishing you tidings of joy.",
+        "Santa’s list has you on it!",
+        "Reindeer footprints in snow.",
+        "The season of warm hearts.",
+        "Happy hearts, holiday starts.",
+        "Glow with the Christmas spirit.",
+        "Sweet treats, sweeter moments.",
+        "Gifts wrapped in love.",
+        "Let your heart feel merry.",
+        "Frosty mornings, cozy evenings.",
+        "Toasty hearts, festive starts.",
+        "Wishing you endless wonder.",
+        "Stars twinkle, hearts sprinkle.",
+        "Crisp air, warm wishes.",
+        "Joy sparkles everywhere!",
+        "Christmas trees and warm teas.",
+        "Snow-dusted magical days.",
+        "Mistletoe, kisses, and cheer.",
+        "Hugs, smiles, and holiday miles.",
+        "Merry hearts, bright starts.",
+        "Jolly vibes and glowing tides.",
+        "Elves are hard at work!",
+        "Presents, peace, and perfection.",
+        "Holiday magic is here!",
+        "Laughter and light abound.",
+        "Share love this holiday season.",
+        "Ornaments glow with cheer.",
+        "Frosty fun, holiday sun.",
+        "Baking cookies, spreading joy.",
+        "Seasonal greetings from the heart.",
+        "Deck the halls with joy!",
+        "Silent nights, joyful sights.",
+        "Yule magic is everywhere.",
+        "Wrapping joy in every bow.",
+        "Evergreen trees and happy bees.",
+        "Festive spirit, warmest hugs.",
+        "Wishing you frosty delight.",
+        "Holiday warmth fills the air.",
+        "Golden bells and snowy spells.",
+        "Stars and stockings, all bright.",
+        "Holiday hugs for everyone.",
+        "Decked out in Christmas cheer.",
+        "Rejoice in holiday splendor!",
+        "Heartfelt greetings, festive meetings.",
+        "Cheer abounds, magic surrounds.",
+        "Dreams of snow and joy.",
+        "Happy wishes, festive dishes.",
+        "Cider, warmth, and celebration.",
+        "Bright memories for you.",
+        "Season’s greetings, warm meetings.",
+        "May your holidays glow bright.",
+        "Winter magic and bright stars.",
+        "Sharing joy and heartfelt love.",
+        "Wishing snowflakes and joy.",
+        "Christmas cuddles and carols."
+
 
     )
 
-    object HistoryManager {
-        val history = mutableListOf<String>()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -159,18 +157,27 @@ class GreetingActivity : BaseActivity() {
     }
 
     private fun handleGrinchInterference(type: String, displayText: TextView) {
-        if (Random.nextInt(100) < 20) {
-            val grinchMessage = "Wishes canceled, the Grinch was here first! Go back to the main page."
-            HistoryManager.history.add("Grinch appeared: $grinchMessage")
+        if (Random.nextInt(100) < 20) { // 20% chance Grinch interferes
+            val grinchMessage = when (type) {
+                "greeting" -> "Wishes canceled, the Grinch \nwas here first!\n \nGo back to main page."
+                else -> "The Grinch strikes again!"
+            }
+            // Log Grinch interference to history
+            HistoryManager.greetingHistory.add("💔Wishes canceled, the Grinch was here first!")
+            // Launch GrinchActivity with the message
             val intent = Intent(this, GrinchActivity::class.java)
             intent.putExtra("grinchMessage", grinchMessage)
             startActivity(intent)
         } else {
-            val message = greetingsIdeas.random()
+            val message = when (type) {
+                "greeting" -> greetingsIdeas.random()
+                else -> "Unexpected choice"
+            }
             displayText.text = message
+            // Add to history only when greeting generation is successful
             if (type == "greeting") {
-                HistoryManager.history.add("Greeting: $message")
+                HistoryManager.greetingHistory.add("💌 $message")
             }
         }
-    }
-}
+
+    } }

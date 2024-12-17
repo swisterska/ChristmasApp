@@ -14,86 +14,87 @@ class GiftActivity : BaseActivity() {
 
 
     private val giftIdeas = arrayOf(
+
+        "Subscription to a streaming service",
         "LEGO set",
         "Cozy socks",
-        "Bluetooth \nheadphones",
+        "Bluetooth headphones",
         "Gift card",
         "Board game",
-        "Scented \ncandles",
-        "Plush \nblanket",
-        "Fitness \ntracker",
-        "Smartphone \nstand",
+        "Scented candles",
+        "Plush blanket",
+        "Fitness tracker",
+        "Smartphone stand",
         "Cookbook",
         "Coffee mug",
-        "Portable \nspeaker",
-        "Wireless \nearpods",
-        "Chocolate \ngift box",
+        "Portable speaker",
+        "Wireless earpods",
+        "Chocolate gift box",
         "Puzzle set",
-        "Stationery \nset",
-        "Instant \ncamera",
+        "Stationery set",
+        "Instant camera",
         "Art supplies",
-        "Perfume or \ncologne",
+        "Perfume or cologne",
         "Wool scarf",
         "Slippers",
         "Backpack",
         "Tool kit",
         "Pocket knife",
-        "Electric \ntoothbrush",
-        "Portable \ncharger",
-        "Succulent \nplant",
+        "Electric toothbrush",
+        "Portable charger",
+        "Succulent plant",
         "Jewelry",
         "Luxury pen",
         "Yoga mat",
-        "Subscription \nbox",
-        "Custom photo \nframe",
-        "Cooking \nutensils",
+        "Subscription box",
+        "Custom photo frame",
+        "Cooking utensils",
         "Knit hat",
-        "Car phone \nmount",
-        "Leather \nwallet",
+        "Car phone mount",
+        "Leather wallet",
         "Water bottle",
         "Smartwatch",
         "Book set",
-        "Gaming \ncontroller",
+        "Gaming controller",
         "VR headset",
-        "Portable \ncoffee maker",
-        "Hair styling \ntools",
+        "Portable coffee maker",
+        "Hair styling tools",
         "Beanie",
         "Hoodie",
         "Wine glasses",
         "Skincare set",
-        "Makeup \npalette",
-        "Outdoor \ncamping gear",
+        "Makeup palette",
+        "Outdoor camping gear",
         "Travel pillow",
-        "Noise-canceling \nheadphones",
+        "Noise-canceling headphones",
         "Mini projector",
         "Robot vacuum",
-        "Slime making \nkit",
-        "Karaoke \nmicrophone",
+        "Slime making kit",
+        "Karaoke microphone",
         "Telescope",
-        "Subscription to \na streaming \nservice",
         "Pet toys",
-        "Gourmet snacks \nbasket",
-        "Hot chocolate \nset",
-        "Bicycle \naccessories",
+        "Gourmet snacks basket",
+        "Hot chocolate set",
+        "Bicycle accessories",
         "Jigsaw puzzles",
-        "Retro video \ngames",
+        "Retro video games",
         "Desk organizer",
-        "Smart home \ndevice",
+        "Smart home device",
         "Bath bomb set",
-        "Notebook \njournal",
-        "Stylish \nsunglasses",
-        "Cooking spices \nset",
-        "Custom puzzle \nwith a photo",
-        "Personalized \nkeychain",
-        "Luxury \nbathrobe",
-        "Bean bag \nchair",
-        "Digital \npicture frame",
+        "Notebook journal",
+        "Stylish sunglasses",
+        "Cooking spices set",
+        "Custom puzzle with a photo",
+        "Personalized keychain",
+        "Luxury bathrobe",
+        "Bean bag chair",
+        "Digital picture frame",
         "DIY craft kit",
-        "Musical \ninstrument",
+        "Musical instrument",
+
+
 
         )
-
-    private val history = mutableListOf<String>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -140,16 +141,22 @@ class GiftActivity : BaseActivity() {
     }
 
     private fun handleGrinchInterference(type: String, displayText: TextView) {
-        if (Random.nextInt(100) < 20) {
-            val grinchMessage = "Oh no! The Grinch stole your present! Go back to the main page."
-            history.add(grinchMessage)
+        if (Random.nextInt(100) < 20) { // 20% chance Grinch interferes
+            val grinchMessage = when (type) {
+                "gift" -> "Oh no! \nThe Grinch \nstole your present!\n \nGo back to main page."
+                else -> "The Grinch strikes again!"
+            }
+            // Log Grinch interference to history
+            HistoryManager.giftHistory.add("💔Oh no! The Grinch stole your present!")
+
+            // Ensure Intent is created correctly
             val intent = Intent(this, GrinchActivity::class.java)
             intent.putExtra("grinchMessage", grinchMessage)
             startActivity(intent)
         } else {
-            val message = giftIdeas.random()
-            history.add(message)
-            displayText.text = message
+            val gift = giftIdeas.random()
+            displayText.text = gift
+            // Add successful gift to history
+            HistoryManager.giftHistory.add("🎁 $gift")
         }
-    }
-}
+    }}

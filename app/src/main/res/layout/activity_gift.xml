@@ -71,7 +71,7 @@
         android:layout_height="80dp"
         android:background="#00FFFFFF"
         android:src="@drawable/newgreetingbutton"
-        android:translationY="360dp"
+        android:translationY="350dp"
         android:translationX="95dp"
         android:layout_marginTop="-70dp"
         android:layout_marginStart="5dp" />

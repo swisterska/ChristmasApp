@@ -9,7 +9,8 @@ object MusicManager {
     private var currentPlaybackPosition = 0
     private val playlist = listOf(
         R.raw.jinglebellrock,
-        R.raw.lastchristmas
+        R.raw.lastchristmas,
+        R.raw.wewishyou
     )
     private var isGrinchMusic = false
     private val grinchMusic = R.raw.grinchmusic

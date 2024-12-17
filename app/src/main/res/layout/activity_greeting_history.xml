@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="@drawable/greetingshistorybackground">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +19,6 @@
             android:background="#00FFFFFF"
             android:src="@drawable/returnbuttonwhitebackground"
             android:contentDescription="Go back to the previous screen" />
-
 
         <!-- Larger Space Between Buttons -->
         <View
@@ -41,5 +41,6 @@
         android:layout_gravity="center"
         android:layout_width="300dp"
         android:layout_height="500dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="60dp"
+        android:scrollbars="vertical" />
 </LinearLayout>

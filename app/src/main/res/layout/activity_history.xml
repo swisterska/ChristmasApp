@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:id="@+id/OpeningActivity"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/background">
 
-    <!-- Horizontal Layout for Buttons, moved higher -->
+    <!-- Horizontal Layout for Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
         android:layout_marginTop="50dp"
-        android:translationY="-290dp"> <!-- Added marginTop for vertical spacing -->
+        android:translationY="-290dp">
 
         <ImageButton
             android:id="@+id/ReturnButton"
@@ -40,6 +40,7 @@
 
     </LinearLayout>
 
+    <!-- Buttons -->
     <ImageButton
         android:id="@+id/GiftHistoryButton"
         android:layout_width="276dp"
@@ -49,9 +50,7 @@
         android:contentDescription="@string/greeting_history_button"
         android:padding="10dp"
         android:src="@drawable/gifthistory"
-        android:translationY="-100dp">
-
-    </ImageButton>
+        android:translationY="-100dp" />
 
     <ImageButton
         android:id="@+id/GreetingHistoryButton"
@@ -62,9 +61,8 @@
         android:contentDescription="@string/gift_history_button"
         android:padding="10dp"
         android:src="@drawable/greetinghistory"
-        android:translationY="-100dp">
+        android:translationY="-100dp" />
 
-    </ImageButton>
 
 
 
